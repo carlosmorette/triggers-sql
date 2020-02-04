@@ -17,7 +17,7 @@ ON	DATABASE
 FOR DROP_TABLE
 AS
 	BEGIN
-		PRINT 'Você deve desativar o gatilho (testeTrigger) para completar esta ação'
+		PRINT 'Você deve desativar o gatilho (securityTest) para completar esta ação'
 		ROLLBACK;
 	END
 GO
@@ -30,8 +30,6 @@ GO
 IF EXISTS (SELECT * FROM sys.triggers
 		   WHERE name = 'securityTest')
 DISABLE TRIGGER securityTest ON DATABASE
-GO
-
 DROP TABLE testeTrigger
 GO
 
