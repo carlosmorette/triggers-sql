@@ -1,3 +1,4 @@
+/*
 CREATE DATABASE ExplicacaoTriggers;
 
 CREATE TABLE CadastroPessoa(
@@ -12,9 +13,9 @@ CREATE TABLE EncaminhaRF(
 	CorpoEncaminha VARCHAR(MAX),
 );
 USE ExplicacaoTriggers;
+*/
 
-
--- Objetivo: Armazenar na tabela 'EncaminhaRF' dados cadastro um usuário
+-- Objetivo: Armazenar na tabela 'EncaminhaRF' dados cadastro do usuário
 
 /* 
 *  Especificações:
@@ -52,5 +53,3 @@ VALUES (
 
 SELECT * FROM CadastroPessoa;
 SELECT * FROM EncaminhaRF;
-
-
