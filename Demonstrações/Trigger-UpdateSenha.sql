@@ -13,34 +13,33 @@ CREATE TABLE AlterarDados(
 	Id_Alterado	INT
 	);
 	
-	
+	use
 	--==============TRIGGER===============
-	CREATE TRIGGER TGR_AlterSenha
+	CREATE TRIGGER TGR_DeletarUsuário
 		ON AlterarDados
-		FOR INSERT
+		for INSERT
 		AS
 		BEGIN
-				DECLARE		@NOVASENHA		VARCHAR(20), 
+				DECLARE	
 							@Id_Alterado	INT
 
 				SELECT
-					@NOVASENHA = NovaSenha,
 					@Id_Alterado = Id_Alterado
 				FROM 
 					INSERTED
 
-			UPDATE Usuarios 
-			SET Senha = @NOVASENHA
+			DELETE FROM Usuarios 
 			WHERE @Id_Alterado = Id_Usuario
 		END
 	--=======================================
 
-	INSERT INTO Usuarios(Nome,Senha)
-	VALUES	('Cesar','cesar1221'),
-			('Adriano','adrianolegal')
+			select * from Usuarios
+			select * from AlterarDados
 	
-	INSERT INTO AlterarDados (NovaSenha, Id_Alterado)
-	VALUES ('cesaraugusto',1)
+	INSERT INTO AlterarDados (Id_Alterado)
+	VALUES (1)
+
+
 
 	
 

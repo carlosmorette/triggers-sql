@@ -17,7 +17,7 @@ ON	DATABASE
 FOR DROP_TABLE
 AS
 	BEGIN
-		PRINT 'Você deve desativar o gatilho (securityTest) para completar esta ação'
+		PRINT 'Não'
 		ROLLBACK;
 	END
 GO
