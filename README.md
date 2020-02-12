@@ -6,6 +6,7 @@ O termo trigger (gatilho em inglês) define uma estrutura do banco de dados que f
 
 Um gatilho está intimamente relacionado a uma tabela, sempre que uma dessas ações é efetuada sobre essa tabela, é possível dispará-lo para executar alguma tarefa.
 
+
 ### A sintaxe para criação de um trigger é a seguinte:
 ```sql
 CREATE TRIGGER [NOME DO TRIGGER]
@@ -15,7 +16,7 @@ AS
     --CORPO DO TRIGGER
 ```
 
-####**Exemplo:**
+#### **Exemplo:**
 ```sql
 CREATE TRIGGER utrEnviarEmailAlunoNovo	
 ON Aluno 
@@ -45,7 +46,4 @@ END
 SELECT * FROM Aluno;
 SELECT * FROM EnviarEmail;
 
-
-INSERT INTO Aluno(Nome, DataNascimento )
-VALUES ('SAULO CAROL', '2020-01-04')
 ```
