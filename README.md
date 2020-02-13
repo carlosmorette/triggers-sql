@@ -1,13 +1,13 @@
 ## Triggers
 
-### O que são Triggers?
+### O que sÃ£o Triggers?
 
-O termo trigger (gatilho em inglês) define uma estrutura do banco de dados que funciona, como o nome sugere, como uma função que é disparada mediante alguma ação. Geralmente essas ações que disparam os triggers são alterações nas tabelas por meio de operações de inserção, exclusão e atualização de dados (insert, delete e update).
+O termo trigger (gatilho em inglÃªs) define uma estrutura do banco de dados que funciona, como o nome sugere, como uma funÃ§Ã£o que Ã© disparada mediante alguma aÃ§Ã£o. Geralmente essas aÃ§Ãµes que disparam os triggers sÃ£o alteraÃ§Ãµes nas tabelas por meio de operaÃ§Ãµes de inserÃ§Ã£o, exclusÃ£o e atualizaÃ§Ã£o de dados (insert, delete e update).
 
-Um gatilho está intimamente relacionado a uma tabela, sempre que uma dessas ações é efetuada sobre essa tabela, é possível dispará-lo para executar alguma tarefa.
+Um gatilho estÃ¡ intimamente relacionado a uma tabela, sempre que uma dessas aÃ§Ãµes Ã© efetuada sobre essa tabela, Ã© possÃ­vel disparÃ¡-lo para executar alguma tarefa.
 
 
-### A sintaxe para criação de um trigger é a seguinte:
+#### A sintaxe para criaÃ§Ã£o de um trigger Ã© a seguinte:
 ```sql
 CREATE TRIGGER [NOME DO TRIGGER]
 ON  [NOME DA TABELA]
