@@ -18,32 +18,32 @@ AS
 
 #### **Exemplo:**
 ```sql
-CREATE TRIGGER utrEnviarEmailAlunoNovo	
-ON Aluno 
+CREATE TRIGGER trgEnviarEmailAlunoNovo	
+ON tblAluno 
 
 FOR INSERT-- Para quando [inserir,alterar,excluir]
 AS
 BEGIN 
 	DECLARE
-		@IdAluno int,
-		@Nome varchar(100);
+		@IdAluno   int,
+		@Nome 	   varchar(100);
 
 		SELECT 
 			@IdAluno = IdAluno,
 			@Nome = Nome
 		FROM 
-			INSERTED -- Que acabou de ser inserido
+			INSERTED -- Os dados que foram inseridos na tabela
 
-		INSERT INTO EnviarEmail	(Destinatario, Assunto,	Corpo )
+		INSERT INTO tblEnviarEmail	(Destinatario, Assunto,	Corpo )
 		VALUES
 		(
 			'aluno.teste@email.com',
 			'Novo aluno cadastrado',
-			'Foi cadastrado o aluno codigo' + CAST(@IdAluno AS VARCHAR) + ' nome' + @Nome
+			'Foi cadastrado o aluno codigo ' + CAST(@IdAluno AS VARCHAR) + ' nome ' + @Nome
 		)		
 END
 
-SELECT * FROM Aluno;
-SELECT * FROM EnviarEmail;
+SELECT * FROM tblAluno;
+SELECT * FROM tblEnviarEmail;
 
 ```
